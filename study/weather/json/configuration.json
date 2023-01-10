@@ -1,0 +1,20 @@
+{
+  "resource" : "WeatherInformation",
+  "label" : "날씨정보",
+  "MessagQueue_URL" : "amqp://devops:devops@13.125.234.119:5672",
+  "Mongodb_URL" : "mongodb://13.125.172.123:27017/iot",
+  "Mongodb_ReadOnly_URL" : "mongodb://13.125.172.123:27018/iot",
+  "Device" : [
+    { 
+      "sidoName" : "경기",
+      "nx" : "59",
+      "ny" : "119",
+      "ArpltnInforInqireSvc_URL" : "http://openapi.airkorea.or.kr/openapi/services/rest/ArpltnInforInqireSvc/getCtprvnMesureSidoLIst",
+      "SecndSrtpdFrcstInfoService2_URL" : "http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData",
+      "ServiceKey" : "YZ6YokZ7z9x3CClxy9BQq96KhjF1pJnENJwyCRLbKSYtA1KWyAX9QaULq%2FVLIa8QwtausIQz9vwq%2FWteHvwHzw%3D%3D",
+      "numOfRow" : "50",
+      "pageNo" : "1",
+      "searchCondition" : "DAILY"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  {
+    "resource" : "SomfyCurtain.Glydea.1",
+    "label" : "커튼",
+    "properties": {
+      "name" : "mode",
+      "type" : "enum",
+      "enum" : ["open", "close", "stop"],
+      "writeOnly" : true
+    }
+  }
+]

@@ -1,0 +1,27 @@
+directories:
+  output: dist/
+  buildResources: resources/installer/
+  app: .
+productName: emulator
+appId: com.electron.hello
+asar: true
+protocols:
+  name: Emulator
+  schemes:
+    - Emulator
+mac:
+  target:
+    - default
+  icon: ./resources/installer/bloodtrail.png
+dmg:
+  title: Emulator
+  icon: ./resources/installer/bloodtrail.png
+win:
+  target:
+    - zip
+    - nsis
+  icon: ./resources/installer/bloodtrail.png
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+electronVersion: 4.0.3

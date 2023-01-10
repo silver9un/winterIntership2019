@@ -1,0 +1,31 @@
+directories:
+  output: dist/
+  buildResources: resources/installer/
+  app: .
+productName: helloworld
+appId: com.electron.hello
+asar: true
+protocols:
+  name: samplehello
+  schemes:
+    - samplehello
+mac:
+  target:
+    - default
+  icon: ./resources/installer/Firefox.png
+dmg:
+  title: samplehello
+  icon: ./resources/installer/Firefox.png
+win:
+  target:
+    - zip
+  icon: ./resources/installer/Firefox.png
+linux:
+  target:
+    - zip
+    - tar.gz
+  icon: ./resources/linuxicon
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+electronVersion: 4.0.4

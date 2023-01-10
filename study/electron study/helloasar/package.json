@@ -1,0 +1,68 @@
+{
+  "name": "samplehello",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "clean": "rm -rf dist",
+    "build": "npm run build:linux && npm run build:osx && npm run build:win",
+    "build:osx": "build --mac",
+    "build:linux": "npm run build:linux32 && npm run build:linux64",
+    "build:linux32": "build --linux --ia32",
+    "build:linux64": "build --linux --x64",
+    "build:win": "npm run build:win32 && npm run build:win64",
+    "build:win32": "build --win --ia32",
+    "build:win64": "build --win --x64"
+  },
+  "homepage": "https://github.com",
+  "author": "eckim <jrym1205@ajou.ac.kr>",
+  "license": "ISC",
+  "build": {
+    "productName": "helloworld",
+    "appId": "com.electron.hello",
+    "asar": true,
+    "protocols": {
+      "name": "samplehello",
+      "schemes": [
+        "samplehello"
+      ]
+    },
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "./resources/installer/Firefox.png"
+    },
+    "dmg": {
+      "title": "samplehello",
+      "icon": "./resources/installer/Firefox.png"
+    },
+    "win": {
+      "target": [
+        "zip"
+      ],
+      "icon": "./resources/installer/Firefox.png"
+    },
+    "linux": {
+      "target": [
+        "zip",
+        "tar.gz"
+      ],
+      "icon": "./resources/linuxicon"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "resources/installer/",
+      "output": "dist/",
+      "app": "."
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^20.38.4",
+    "electron-winstaller": "^2.7.0"
+  }
+}

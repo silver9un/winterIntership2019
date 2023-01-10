@@ -1,0 +1,55 @@
+[
+  {
+    "resource" : "WeatherInformation.ArpltnInforInqireSvc.CtprvnMesureLIst",
+    "label" : "미세먼지",
+    "properties": {
+      "name" : "PM10",
+      "type":"integer",
+      "readOnly":true,
+      "unit" : "㎍/㎥"
+    }
+  },
+  {
+    "resource" : "WeatherInformation.ArpltnInforInqireSvc.CtprvnMesureLIst",
+    "label" : "초미세먼지",
+    "properties": {
+      "name" : "PM2.5",
+      "type":"integer",
+      "readOnly":true,
+      "unit" : "㎍/㎥"
+    }
+  },
+  {
+    "resource" : "WeatherInformation.SecndSrtpdFrcstInfoService2.ForecastSpaceData",
+    "label" : "현재 온도",
+    "properties": {
+      "name" : "T3H",
+      "type":"integer",
+      "readOnly":true,
+      "unit":"℃",
+      "comment" : "3시간 기온"
+    }
+  },
+  {
+    "resource" : "WeatherInformation.SecndSrtpdFrcstInfoService2.ForecastSpaceData",
+    "label" : "하늘상태",
+    "properties": {
+      "name" : "SKY",
+      "type" : "enum",
+      "enum" : ["sunny", "partly cloudy", "mostly cloudy", "cloudy"],
+      "readOnly" : true,
+      "comment" : "하늘상태 : 맑음, 구름조금, 구름많음, 흐림"
+    }
+  },
+  {
+    "resource" : "WeatherInformation.SecndSrtpdFrcstInfoService2.ForecastSpaceData",
+    "label" : "강수형태",
+    "properties": {
+      "name" : "PTY",
+      "type" : "enum",
+      "enum" : [ "clear", "rain", "mixed rain and snow", "snow" ],
+      "readOnly":true,
+      "comment" : "강수형태 : 없음, 비, 비/눈, 눈"
+    }
+  }
+]

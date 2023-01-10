@@ -1,0 +1,9 @@
+{
+  "name": "hello",
+  "script": "server.bundle.js",
+  "instances": "2",
+  "env": {
+    "PORT": 8080,
+    "NODE_ENV": "production"
+  }
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "resource" : "PhilipsHue.Bridge1.1.1",
+    "label" : "조명1 Power",
+    "properties": {
+      "name" : "power",
+      "type":"enum",
+      "enum" : ["on", "off"]
+    }
+  },
+  {
+    "resource" : "PhilipsHue.Bridge1.1.1",
+    "label" : "조명1 Color",
+    "properties" :
+    { 
+        "name" : "color",
+        "type" : "object",
+        "hue" : {"type" : "integer", "minimum" : 0, "maximum" : 65535},
+        "saturation" : {"type" : "integer", "minimum" : 0, "maximum" : 254},
+        "brightness" : {"type" : "integer", "minimum" : 1, "maximum" : 254}
+    } 
+  },
+  {
+    "resource" : "PhilipsHue.Bridge1.1.1",
+    "label" : "조명1 온도",
+    "properties": {
+      "name" : "colorTemperature",
+      "type":"integer",
+      "minimum":153,
+      "maximum":500,
+      "step":1
+    } 
+  },
+  {
+    "resource" : "PhilipsHue.Bridge1.2.1",
+    "label" : "조명2 power",
+    "properties": {
+      "name" : "power",
+      "type":"enum",
+      "enum" : ["on", "off"]
+    }
+  },
+  {
+    "resource" : "PhilipsHue.Bridge1.2.1",
+    "label" : "조명2 Color",
+    "properties" :
+    { 
+        "name" : "color",
+        "type" : "object",
+        "hue" : {"type" : "integer", "minimum" : 0, "maximum" : 65535},
+        "saturation" : {"type" : "integer", "minimum" : 0, "maximum" : 254},
+        "brightness" : {"type" : "integer", "minimum" : 1, "maximum" : 254}
+    } 
+  },
+  {
+    "resource" : "PhilipsHue.Bridge1.2.1",
+    "label" : "조명2 온도",
+    "properties": {
+      "name" : "colorTemperature",
+      "type":"integer",
+      "minimum":153,
+      "maximum":500,
+      "step":1
+    }
+  }
+]

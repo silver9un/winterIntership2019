@@ -1,0 +1,22 @@
+{
+  "resource" : "PhilipsHue",
+  "label" : "조명",
+  "MessagQueue_URL" : "amqp://devops:devops@13.125.234.119:5672",
+  "Mongodb_URL" : "mongodb://13.125.172.123:27017/iot",
+  "Mongodb_ReadOnly_URL" : "mongodb://13.125.172.123:27018/iot",
+  "Device" : [
+    { 
+      "Bridge_IP" : "192.168.0.2",
+      "UserName" : "/8S6pim7ZfL5S1t96nRpUdT5v4AqUd0lZOAb7uiPm",
+      
+      "group" : "/groups/",
+
+      "group1" : "groups/1",
+      "group2" : "groups/2",
+
+      "url" : "http://202.30.30.77:80/api/8S6pim7ZfL5S1t96nRpUdT5v4AqUd0lZOAb7uiPm/groups/",
+      "group1url" :"http://202.30.30.77:80/api/8S6pim7ZfL5S1t96nRpUdT5v4AqUd0lZOAb7uiPm/groups/1",
+      "group2url" :"http://202.30.30.77:80/api/8S6pim7ZfL5S1t96nRpUdT5v4AqUd0lZOAb7uiPm/groups/2"
+    }
+  ]
+}

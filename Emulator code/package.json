@@ -1,0 +1,69 @@
+{
+  "name": "ee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "clean": "rm -rf dist",
+    "build": "npm run build:osx && npm run build:win",
+    "build:osx": "build --mac",
+    "build:win": "npm run build:win32 && npm run build:win64",
+    "build:win32": "build --win --ia32",
+    "build:win64": "build --win --x64"
+  },
+  "keywords": [],
+  "author": "@pencarelab",
+  "license": "ISC",
+  "build": {
+    "productName": "emulator",
+    "appId": "com.electron.hello",
+    "asar": true,
+    "protocols": {
+      "name": "Emulator",
+      "schemes": [
+        "Emulator"
+      ]
+    },
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "./resources/installer/bloodtrail.png"
+    },
+    "dmg": {
+      "title": "Emulator",
+      "icon": "./resources/installer/bloodtrail.png"
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "./resources/installer/bloodtrail.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "directories": {
+      "buildResources": "resources/installer/",
+      "output": "dist/",
+      "app": "."
+    }
+  },
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "consola": "^2.3.2",
+    "electron-reload": "^1.4.0",
+    "express": "^4.16.4",
+    "moment": "^2.24.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "asar": "^0.14.6",
+    "electron": "^4.0.3",
+    "electron-builder": "^20.38.5",
+    "electron-packager": "^13.0.1"
+  }
+}

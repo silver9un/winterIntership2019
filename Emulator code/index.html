@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <title>Emulator</title>
+  </head>
+  <body>
+    <div>
+      <h3>URL: http://localhost:8080/bridge</h3>
+      <label>receive:</label><br>
+      <pre id="receivemsg"></pre>
+    </div>
+    <div>
+      <br><label>GET: 'URL'</label><br>
+      <label> (ex. '/hue', '/hue/:id', '/hue/:id/action',
+          '/sensibo', '/sensibo/current', '/sensibo/acState')</label><br>
+      <br><input type="text" id="input_url" size="30" value='/hue/1/action'>
+      <button onclick="input()">send</button><br>
+
+    </div><br>
+    <label>state:</label><br>
+    <pre id="statemsg"></pre>
+      <script src="/socket.io/socket.io.js"></script>
+      <script>
+        const url = 'http://localhost:8080/bridge'
+        var temp = null
+
+        var request = new XMLHttpRequest()
+
+        function input() {
+          var input = document.getElementById('input_url').value
+          temp = url + input
+          console.log(temp)
+
+          request.open('GET', temp)
+          
+          request.onload = function() {
+            if (this.status != 200) {
+              var errormsg = 'Error: ' + request.status + ' ' + request.statusText
+
+              console.log(errormsg)
+              alert(errormsg)
+            } else {
+              var reqdata = JSON.parse(this.response)
+              //reqdata = this.response
+              console.log(reqdata)
+              document.getElementById('statemsg').value = JSON.stringify(reqdata, undefined, '\t')
+            }
+          }
+          request.send()
+        }
+
+        var socket = io();
+        socket.on('receive', function(data) {
+          console.log('receive msg: ', data)
+          
+          var str = document.getElementById("receivemsg")
+          str.innerHTML = data
+        })
+
+        socket.on('state', function(data) {
+          console.log('receive msg from state: ', data)
+          var str = document.getElementById("statemsg")
+          str.innerHTML = data
+        })
+
+        socket.on('test', function(data) {
+          console.log('receive msg from state: ', data)
+          var str = document.getElementById("statemsg")
+          str.innerHTML = data
+        })
+      </script>
+  </body>
+</html>

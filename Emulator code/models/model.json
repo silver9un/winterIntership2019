@@ -1,0 +1,104 @@
+{
+	"hue": {
+		"1": {
+			"name": "조명1",
+			"lights": [
+				"4",
+				"6"
+			],
+			"type": "Room",
+			"state": {
+				"all_on": false,
+				"any_on": true
+			},
+			"class": "Office",
+			"action": {
+				"on": false,
+				"bri": 254,
+				"hue": 14988,
+				"sat": 141,
+				"effect": "none",
+				"xy": [
+					0.4575,
+					0.4101
+				],
+				"ct": 366,
+				"alert": "none",
+				"colormode": "ct"
+			}
+		},
+		"2": {
+			"name": "조명2",
+			"lights": [
+				"5"
+			],
+			"type": "Room",
+			"state": {
+				"all_on": false,
+				"any_on": false
+			},
+			"class": "Living room",
+			"action": {
+				"on": false,
+				"bri": 254,
+				"hue": 14988,
+				"sat": 141,
+				"effect": "none",
+				"xy": [
+					0.4575,
+					0.4101
+				],
+				"ct": 366,
+				"alert": "none",
+				"colormode": "ct"
+			}
+		},
+		"3": {
+			"name": "거실",
+			"lights": [],
+			"type": "Room",
+			"state": {
+				"all_on": false,
+				"any_on": false
+			},
+			"class": "Living room",
+			"action": {
+				"on": false,
+				"alert": "none"
+			}
+		},
+		"4": {
+			"name": "1",
+			"lights": [],
+			"type": "Room",
+			"state": {
+				"all_on": false,
+				"any_on": false
+			},
+			"class": "Living room",
+			"action": {
+				"on": false,
+				"alert": "none"
+			}
+		}
+	},
+
+	"sensibo": {
+		"status": "Success",
+		"reason": "UserRequest",
+		"acState": {
+			"on": true,
+			"targetTemperature": 23,
+			"temperatureUnit": "C",
+			"mode": "cool",
+			"fanLevel": "high"
+		},
+		"changedProperties": [ "on", "mode", "targetTemperature", "fanLevel" ],
+		"id": "UPKddPdqZj",
+		"failureReason": null,
+		"current": {
+			"currentTemperature" : 0,
+			"humidity" : 0
+		}
+	}
+}
